@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Modernizer</title>
+    <style>
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Modernizer</h1>
+    <form action="/edit" method="post">
+        <label for="html_code">Paste your HTML code:</label><br>
+        <textarea id="html_code" name="html_code" rows="10" cols="50"></textarea><br><br>
+        <button type="submit">Modernize</button>
+    </form>
+    {% if message %}
+        <div class="success-message">
+            {{ message }}
+        </div>
+    {% endif %}
+</body>
+</html>

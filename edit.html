@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Modernized HTML</title>
+</head>
+<body>
+    <h1>Edit Modernized HTML</h1>
+    <form action="/save" method="post">
+        <textarea name="edited_code" rows="15" cols="60">{{ original_code }}</textarea><br><br>
+        <input type="hidden" name="original_code" value="{{ original_code }}">
+        <button type="submit">Save</button>
+    </form>
+    <form action="/compare" method="post" style="margin-top: 20px;">
+        <input type="hidden" name="original_code" value="{{ original_code }}">
+        <input type="hidden" name="edited_code" value="{{ original_code }}">
+        <button type="submit">Compare Changes</button>
+    </form>
+</body>
+</html>
